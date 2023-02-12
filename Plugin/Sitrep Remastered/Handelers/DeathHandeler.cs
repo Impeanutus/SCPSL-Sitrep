@@ -51,7 +51,7 @@ namespace Sitrep_Remastered.Handelers
 
                 var content = new FormUrlEncodedContent(values);
 
-                await PluginMain.client.PostAsync("http://127.0.0.1:6868/OnDeath", content);
+                await PluginMain.client.PostAsync($"{PluginMain.IP}/OnDeath", content);
             }
             catch (Exception err) {
                 Log.Error(err);

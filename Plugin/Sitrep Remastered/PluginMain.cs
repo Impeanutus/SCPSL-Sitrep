@@ -16,6 +16,8 @@ namespace Sitrep_Remastered
         private static readonly Lazy<PluginMain> LazyInstance = new Lazy<PluginMain>(valueFactory: () => new PluginMain());
         public static PluginMain Instance => LazyInstance.Value;
 
+        public static string IP;
+
         public static readonly HttpClient client = new HttpClient();
 
         public Timer PlayerCountTimer;
@@ -45,6 +47,8 @@ namespace Sitrep_Remastered
             PlayerCountTimer.Interval= 10000;
             PlayerCountTimer.Enabled= true;
             PlayerCountTimer.Elapsed += Handelers.PlayerCount.OnTimer;
+
+            IP = Config.ip;
 
             Enable();
         }

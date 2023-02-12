@@ -28,7 +28,7 @@ namespace Sitrep_Remastered.Handelers
                 var content = new FormUrlEncodedContent(values);
 
 
-                await PluginMain.client.PostAsync("http://127.0.0.1:6868/OnCuff", content);
+                await PluginMain.client.PostAsync($"{PluginMain.IP}/OnCuff", content);
             }
             catch (Exception ex)
             {
@@ -53,7 +53,7 @@ namespace Sitrep_Remastered.Handelers
                 var content = new FormUrlEncodedContent(values);
 
 
-                await PluginMain.client.PostAsync("http://127.0.0.1:6868/OnUnCuff", content);
+                await PluginMain.client.PostAsync($"{PluginMain.IP}/OnUnCuff", content);
             }
             catch (Exception ex)
             {

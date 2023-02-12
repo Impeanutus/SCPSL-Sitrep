@@ -24,7 +24,7 @@ namespace Sitrep_Remastered.Handelers
                 var content = new FormUrlEncodedContent(values);
 
 
-                await PluginMain.client.PostAsync("http://127.0.0.1:6868/PlayerCount", content);
+                await PluginMain.client.PostAsync($"{PluginMain.IP}/PlayerCount", content);
             }
             catch (Exception err) 
             {

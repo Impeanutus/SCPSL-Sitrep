@@ -25,7 +25,7 @@ namespace Sitrep_Remastered.Handelers
 
                 var content = new FormUrlEncodedContent(values);
 
-                await PluginMain.client.PostAsync("http://127.0.0.1:6868/OnJoin", content);
+                await PluginMain.client.PostAsync($"{PluginMain.IP}/OnJoin", content);
             }
             catch (Exception ex) 
             {
@@ -46,7 +46,7 @@ namespace Sitrep_Remastered.Handelers
 
                 var content = new FormUrlEncodedContent(values);
 
-                await PluginMain.client.PostAsync("http://127.0.0.1:6868/OnLeave", content);
+                await PluginMain.client.PostAsync($"{PluginMain.IP}/OnLeave", content);
             }
             catch (Exception ex)
             {

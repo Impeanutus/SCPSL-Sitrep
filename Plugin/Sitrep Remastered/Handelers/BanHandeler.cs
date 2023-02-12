@@ -28,7 +28,7 @@ namespace Sitrep_Remastered.Handelers
                 var content = new FormUrlEncodedContent(values);
 
 
-                await PluginMain.client.PostAsync("http://127.0.0.1:6868/OnBan", content);
+                await PluginMain.client.PostAsync($"{PluginMain.IP}/OnBan", content);
             }
             catch (Exception err) 
             {
@@ -55,7 +55,7 @@ namespace Sitrep_Remastered.Handelers
 
                         var content = new FormUrlEncodedContent(values);
 
-                        await PluginMain.client.PostAsync("http://127.0.0.1:6868/OnOfflineBan", content);
+                        await PluginMain.client.PostAsync($"{PluginMain.IP}/OnOfflineBan", content);
                     }
                 }
             }
